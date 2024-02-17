@@ -10,4 +10,8 @@ public class MyController {
     public String start(){
         return LocalDateTime.now() + " " + " render";
     }
+    @GetMapping("/a")
+    public String startA(){
+        return LocalDateTime.now() + " " + " render" + " som updates";
+    }
 }
