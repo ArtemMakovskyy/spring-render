@@ -1,6 +1,6 @@
 FROM ubuntu:latest AS build
 RUN apt-get update
-RUN apt-get instal openjdk-17-jdk -y
+RUN apt-get install -y openjdk-17-jdk
 COPY . .
 RUN ./mvnw clean package
 
