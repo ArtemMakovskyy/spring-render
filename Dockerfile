@@ -2,7 +2,7 @@ FROM ubuntu:latest AS build
 RUN apt-get update
 RUN apt-get instal openjdk-17-jdk -y
 COPY . .
-RUN mvn clean package
+RUN ./mvnw clean package
 
 FROM openjdk:17-alpine
 EXPOSE 8080
