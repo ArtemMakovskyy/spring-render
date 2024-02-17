@@ -1,6 +1,7 @@
 FROM ubuntu:latest AS build
 RUN apt-get update
 RUN apt-get install -y openjdk-17-jdk
+ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
 COPY . .
 RUN chmod +x ./mvnw
 RUN ./mvnw clean package
